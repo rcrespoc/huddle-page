@@ -1,0 +1,60 @@
+:root{
+  --violet: hsl(257, 40%, 49%);
+  --soft-nagenta: hsl(300, 69%, 71%);
+}
+html{
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--violet);
+}
+body{
+  background-image: url(../images/bg-mobile.svg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+@media screen and (min-width: 68rem){
+  body{ background-image: url(../images/bg-desktop.svg); }
+}
+
+/* -------------------- COMPONENTES -------------------- */
+.btn{
+  outline:none;
+  cursor: pointer;
+  color: var(--violet);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 5px 5px 15px -9px #000000;
+}
+.btn:hover{ opacity: .7; }
+
+/* -------------------- ESTILOS -------------------- */
+.header-logo > a > img{ width: 150px; }
+
+/* -------------------- MAIN SECTION -------------------- */
+@media screen and (min-width: 51rem){
+  .main-section{ flex: 1; }
+}
+@media screen and (min-width: 68rem){
+  .main-section > .container{
+    align-items: center;
+    justify-content: center;
+  }
+  .main-text{ flex-basis: 68%; }
+}
+@media screen and (min-width: 96rem){
+  .main-text{ flex-basis: 20%; }
+}
+
+/* -------------------- FOOTER -------------------- */
+.sociales{
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 68rem){
+  .sociales{ justify-content: flex-end; }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{ background-color: var(--soft-nagenta); }
+.attribution > a{ color: var(--violet); }
